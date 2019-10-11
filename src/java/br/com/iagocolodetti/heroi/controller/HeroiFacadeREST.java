@@ -1,6 +1,6 @@
-package br.com.iagocolodetti.heroi.service;
+package br.com.iagocolodetti.heroi.controller;
 
-import br.com.iagocolodetti.heroi.Heroi;
+import br.com.iagocolodetti.heroi.model.Heroi;
 import br.com.iagocolodetti.heroi.Util;
 import com.google.gson.JsonSyntaxException;
 import java.util.Iterator;
@@ -17,9 +17,9 @@ import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -30,12 +30,19 @@ import javax.ws.rs.core.MediaType;
  * @author iagocolodetti
  */
 @Stateless
-@Path("heroi")
+@Path("herois")
 public class HeroiFacadeREST {
 
-    @PersistenceContext(unitName = "HeroiRESTPU")
+    @PersistenceContext(unitName = "HeroisRESTPU")
     private EntityManager em;
 
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public String findAllAtivo() {
+        TypedQuery<Heroi> tq = em.createNamedQuery("Heroi.findAllAtivo", Heroi.class);
+        return Util.toJson(tq.getResultList());
+    }
+    
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
@@ -65,9 +72,8 @@ public class HeroiFacadeREST {
         return resposta;
     }
 
-    @PUT
+    @DELETE
     @Path("{id}")
-    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
     public String logicalDelete(@PathParam("id") Integer id) {
         String resposta = "";
@@ -80,12 +86,5 @@ public class HeroiFacadeREST {
             e.printStackTrace();
         }
         return resposta;
-    }
-    
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public String findAllAtivo() {
-        TypedQuery<Heroi> tq = em.createNamedQuery("Heroi.findAllAtivo", Heroi.class);
-        return Util.toJson(tq.getResultList());
     }
 }

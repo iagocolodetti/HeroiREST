@@ -1,5 +1,6 @@
 package br.com.iagocolodetti.heroi;
 
+import br.com.iagocolodetti.heroi.model.Heroi;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;

@@ -1,4 +1,4 @@
-package br.com.iagocolodetti.heroi.service;
+package br.com.iagocolodetti.heroi;
 
 import java.util.Set;
 import javax.ws.rs.core.Application;
@@ -24,9 +24,9 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(br.com.iagocolodetti.heroi.service.HeroiFacadeREST.class);
-        resources.add(br.com.iagocolodetti.heroi.service.NewCrossOriginResourceSharingFilter.class);
-        resources.add(br.com.iagocolodetti.heroi.service.UniversoFacadeREST.class);
+        resources.add(br.com.iagocolodetti.heroi.NewCrossOriginResourceSharingFilter.class);
+        resources.add(br.com.iagocolodetti.heroi.controller.HeroiFacadeREST.class);
+        resources.add(br.com.iagocolodetti.heroi.controller.UniversoFacadeREST.class);
     }
 
 }

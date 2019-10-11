@@ -1,4 +1,4 @@
-package br.com.iagocolodetti.heroi;
+package br.com.iagocolodetti.heroi.model;
 
 import com.google.gson.annotations.Expose;
 import java.io.Serializable;

@@ -1,4 +1,4 @@
-package br.com.iagocolodetti.heroi;
+package br.com.iagocolodetti.heroi.model;
 
 import com.google.gson.annotations.Expose;
 import java.io.Serializable;
@@ -53,7 +53,7 @@ public class Heroi implements Serializable {
     private String nome;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "dataCadastro")
+    @Column(name = "data_cadastro")
     @Temporal(TemporalType.TIMESTAMP)
     @Expose
     private Date dataCadastro;
@@ -62,8 +62,8 @@ public class Heroi implements Serializable {
     @Column(name = "ativo")
     @Expose
     private boolean ativo;
-    @JoinColumn(name = "idUniverso", referencedColumnName = "id")
-    @OneToOne(optional = false)
+    @JoinColumn(name = "universo_id", referencedColumnName = "id")
+    @OneToOne
     @Expose
     private Universo universo;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "heroi", orphanRemoval = true)

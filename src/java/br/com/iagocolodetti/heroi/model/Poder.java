@@ -1,4 +1,4 @@
-package br.com.iagocolodetti.heroi;
+package br.com.iagocolodetti.heroi.model;
 
 import com.google.gson.annotations.Expose;
 import java.io.Serializable;
@@ -37,8 +37,8 @@ public class Poder implements Serializable {
     @Column(name = "descricao")
     @Expose
     private String descricao;
-    @JoinColumn(name = "idHeroi", referencedColumnName = "id")
-    @ManyToOne(optional = false)
+    @JoinColumn(name = "heroi_id", referencedColumnName = "id")
+    @ManyToOne
     private Heroi heroi;
 
     public Poder() {

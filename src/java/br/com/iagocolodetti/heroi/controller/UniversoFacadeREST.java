@@ -1,6 +1,6 @@
-package br.com.iagocolodetti.heroi.service;
+package br.com.iagocolodetti.heroi.controller;
 
-import br.com.iagocolodetti.heroi.Heroi;
+import br.com.iagocolodetti.heroi.model.Heroi;
 import br.com.iagocolodetti.heroi.Util;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -15,10 +15,10 @@ import javax.ws.rs.core.MediaType;
  * @author iagocolodetti
  */
 @Stateless
-@Path("universo")
+@Path("universos")
 public class UniversoFacadeREST {
 
-    @PersistenceContext(unitName = "HeroiRESTPU")
+    @PersistenceContext(unitName = "HeroisRESTPU")
     private EntityManager em;
 
     @GET

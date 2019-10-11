@@ -1,13 +1,13 @@
 # Heroi
 
-Projeto dividido em duas partes, WebService (HeroiREST) e Cliente ([heroi-cliente](https://github.com/iagocolodetti/heroi-cliente "https://github.com/iagocolodetti/heroi-cliente")).
+Projeto dividido em duas partes, WebService (HeroiREST) e Cliente ([heroi-cliente](https://github.com/iagocolodetti/heroi-cliente/tree/v1.1 "https://github.com/iagocolodetti/heroi-cliente/tree/v1.1")).
 
 * Downloads: https://github.com/iagocolodetti/HeroiREST/releases
-   * [Arquivo de Script SQL Server](https://github.com/iagocolodetti/HeroiREST/releases/download/v1.0/heroidb.sql "heroidb.sql")
-   * [Arquivo de Implantação [WebService]](https://github.com/iagocolodetti/HeroiREST/releases/download/v1.0/HeroiREST.war "HeroiREST.war")
-   * [Bibliotecas Necessárias](https://github.com/iagocolodetti/HeroiREST/releases/download/v1.0/bibliotecas.zip "bibliotecas.zip")
-   * [Código-Fonte](https://github.com/iagocolodetti/HeroiREST/archive/v1.0.zip "v1.0.zip")
-   * [heroi-cliente](https://github.com/iagocolodetti/heroi-cliente/releases "https://github.com/iagocolodetti/heroi-cliente/releases")
+   * [Arquivo de Script SQL Server](https://github.com/iagocolodetti/HeroiREST/releases/download/v1.1/heroidb.sql "heroidb.sql")
+   * [Arquivo de Implantação [WebService]](https://github.com/iagocolodetti/HeroiREST/releases/download/v1.1/HeroiREST.war "HeroiREST.war")
+   * [Bibliotecas Necessárias](https://github.com/iagocolodetti/HeroiREST/releases/download/v1.1/bibliotecas.zip "bibliotecas.zip")
+   * [Código-Fonte](https://github.com/iagocolodetti/HeroiREST/archive/v1.1.zip "v1.1.zip")
+   * [heroi-cliente](https://github.com/iagocolodetti/heroi-cliente/releases/tag/v1.1 "https://github.com/iagocolodetti/heroi-cliente/releases/tag/v1.1")
 
 
 ## HeroiREST
